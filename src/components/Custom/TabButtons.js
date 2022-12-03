@@ -5,29 +5,23 @@ import Tab from '@mui/material/Tab';
 import { styled } from '@mui/material';
 
 const CustomTabs = styled(Tabs)(({ theme }) => ({
-   padding: '5px',
-   boxShadow:
-      'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px',
    borderRadius: '15px',
+   padding: '5px',
+
    '& .MuiTabs-flexContainer': {
       justifyContent: 'space-between',
    },
    '& .MuiTab-root': {
       textTransform: 'capitalize',
+      border: '1px solid transparent',
       color: '#000',
-
       '&:hover': {
-         //  color: theme.palette.primary.main,
+         color: theme.palette.primary.main,
+         borderRadius: '15px',
       },
    },
-
    '& .Mui-selected': {
-      background: theme.palette.primary.main,
-      color: '#ffffff !important',
       borderRadius: '15px',
-   },
-   '& .MuiTabs-indicator': {
-      display: 'none',
    },
 }));
 

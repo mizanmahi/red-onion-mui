@@ -6,6 +6,7 @@ import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import FeatureCard from '../FeatureCard/FeatureCard';
+import { Link } from 'react-router-dom';
 // import FeatureCard from '../FeatureCard/FeatureCard';
 
 const featuresCardData = [
@@ -66,13 +67,29 @@ const Features = () => {
                   <FeatureCard feature={feature} />
                ))}
             </Box>
-            <Button
-               sx={{
-                  borderRadius: '4px',
-               }}
-            >
-               Checkout Your Food
-            </Button>
+            <Box sx={{width: '100%', my: 3, }}>
+               <Button
+                  sx={{
+                     borderRadius: '4px',
+                     mx: 'auto',
+                     display: 'block',
+                     bgcolor:'#f5f5f5',
+                     color:'#191919',
+                     width: [ 'fit-content'],
+                     boxShadow: 0,
+                     '&:hover': {
+                        color: 'primary.main',
+                        bgcolor:'#f5f5f5',
+
+                     }
+                  }}
+                  component={Link}
+                  
+                  to='/checkout'
+               >
+                  Checkout Your Food
+               </Button>
+            </Box>
          </Container>
       </Box>
    );
